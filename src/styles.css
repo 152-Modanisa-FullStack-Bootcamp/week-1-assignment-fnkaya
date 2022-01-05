@@ -1,4 +1,149 @@
-h1 {
-  color: hotpink;
-  font-family: cursive;
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+.container {
+    height: 100%;
+    width: 75%;
+    border: 1px solid black;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+   background-color: white;
+    width: 500px;
+    border-radius: 16px;
+}
+
+/*
+    Card header
+*/
+
+.header {
+    padding: 1em;
+    position: relative;
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+}
+
+.owner-image {
+    font-size: 2em;
+}
+
+.owner-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.owner-information > span {
+    line-height: 1.2em;
+}
+
+.owner-information > span:first-child {
+    font-weight: 700;
+}
+
+.owner-information > span:not(:first-child) {
+    color: #aaa;
+    font-size: 0.85em;
+}
+
+.header-menu {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 700;
+    top: 0;
+    right: 16px;
+}
+
+.header-menu:hover {
+    cursor: pointer;
+}
+
+/*
+    Card header end
+ */
+
+/*
+    Card body
+ */
+
+.post-text {
+    margin: 1em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.body > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.post-detail {
+    background-color: #eee;
+    padding: .5em 1em;
+}
+
+.post-title {
+    font-weight: 700;
+    margin-bottom: .5em;
+}
+
+.post-link {
+    color: #aaa;
+    font-size: .8em;
+}
+
+/*
+    Card body end
+ */
+
+/*
+    Card footer
+ */
+
+.footer {
+    padding: 8px 16px 16px;
+}
+
+.interaction-info {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 8px;
+    display: flex;
+    column-gap: 8px;
+    color: #aaa;
+    font-size: .9em;
+}
+
+.interaction-info > span:last-child {
+    margin-left: auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 16px;
+    color: #aaa;
+}
+
+/*
+    Card footer end
+ */
