@@ -1,4 +1,105 @@
-h1 {
-  color: hotpink;
-  font-family: cursive;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import "./styles/variables.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+}
+
+.container {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    box-shadow: 1px 1px 8px 1px var(--border-color);
+}
+
+.card-header {
+    padding: 1em 1.5em;
+    border-bottom: .1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #000;
+    font-weight: 700;
+}
+
+.card-content {
+    padding: 3em 4em;
+}
+
+.card-content form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 2em;
+}
+
+#username, #password {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#username:focus, #password:focus {
+    outline: none
+}
+
+#username, #password, .button-login {
+    width: 100%;
+    padding: 1em 0;
+}
+
+.forgot-password-link {
+    align-self: flex-start;
+}
+
+.button-login {
+    background-color: var(--button-color);
+    border-radius: 50px;
+    border: none;
+    color: white;
+}
+
+.button-login:hover {
+    outline: 1px solid var(--border-color);
+}
+
+.signup-text, .forgot-password-link {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.signup-text > a {
+    color: var(--button-color);
+}
+
+.signup-text > a:hover, .forgot-password-link:hover {
+    cursor: pointer;
+}
+
